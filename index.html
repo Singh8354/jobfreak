@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Job Freak</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/bd23512980.js" crossorigin="anonymous"></script>
+</head>
+<body>
+        <div class="buttons">
+                <button onclick="showToast(contactMsg)">Contact Us </button>
+                <button onclick="showToast(aboutMsg)">About Us</button>
+                <button onclick="showToast(locationMsg)">Location</button>
+        </div>
+
+        <div id="toastBox"></div>
+
+
+        <script>
+
+        let toastBox = document.getElementById('toastBox');
+        let contactMsg = '<i class="fa-solid fa-phone"></i> Contact Here'
+        let aboutMsg =   '<i class="fa-regular fa-id-badge"></i> About Us'
+        let locationMsg = '<i class="fa-solid fa-location-pin"></i> Location'
+
+                function showToast(msg){
+                       let toast= document.createElement('div');
+                       toast.classList.add('toast');
+                       toast.innerHTML= msg;
+                       toastBox.appendChild(toast);
+                }
+        </script>
+</body>
+</html>
